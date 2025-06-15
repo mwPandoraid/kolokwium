@@ -1,0 +1,16 @@
+1. cd ~
+2. mkdir raporty
+3. chmod o-rwx raporty
+4. cd raporty
+5. touch statystyki.csv
+6. echo "miasto,populacja,rok" > statystyki.csv
+7. echo "Lublin,999999,2025\nWarszawa,19191919,2024\nPoznan,2222222,2023" >> statystyki.csv
+8. cat statystyki.csv
+9. touch .archiwum_statystyk.csv
+10. ls -a
+11. find /etc/ -name "*net*" -maxdepth 1 2>/dev/null
+12. find / -maxdepth 1 -name "*log*" -type d> logdirs.txt
+13. tail -n +2 statystyki.csv > .archiwum_statystyk.csv; cat .archiwum_statystyk.csv | sort | nl > .archiwum_statystyk2.csv
+14. diff .archiwum_statystyk.csv .archiwum_statystyk2.csv
+15. sed -i "s/,/ /g" .archiwum_statystyk.csv
+16. sed -n '/^[^ ]* [^ ]*8[^ ]* /p' .archiwum_statystyk.csv
